@@ -1,0 +1,11 @@
+#!/bin/bash
+file="/etc/wpa_supplicant-$2.conf"
+if test -f "$file"; then
+	echo "Connecting to $2"
+	wpa_supplicant -B -i "$1" -c "$file"
+	rc restart dhclient
+else
+	wpa_passphrase "$2" "$3" > "$file"
+	wpa_supplicant -B -i "$1" -c "$file"
+	rc restart dhclient
+fi
