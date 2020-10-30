@@ -4,9 +4,10 @@ Based on minirc, but I have added some failsafes and added some extra features
 ----------------------------------------------------------------------------
 Installation
 clone the repo
-run ./setup.sh --force
+install all files to the correct locations (if you don't know where they should go, don't use this)
+MAKE SURE YOU KNOW WHAT THE FILES DO BEFORE USING THEM
 replace the init in your kernel parameters
-add daemons to /etc/fastrc.cfg and emable them
+add daemons to /etc/fastrc.cfg and enable them
 reboot
 ----------------------------------------------------------------------------
 Do NOT remove systemd, systemd-udevd is still required.
